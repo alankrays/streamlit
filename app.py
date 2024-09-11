@@ -9,4 +9,6 @@ if st.checkbox("Affichier le jdd"):
 
 pro = df.Profession.unique()
 
-st.selectbox('Selectionnez une profession', pro)
+user_selection = st.selectbox('Selectionnez une profession', pro)
+
+st.write(df[df.Profession==user_selection])
