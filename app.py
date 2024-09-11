@@ -4,4 +4,5 @@ import pandas as pd
 st.title("My Dashboard")
 df = pd.read_csv('data.csv',sep=',')
 
-st.write(df)
+if st.checkbox("Affichier le jdd"):
+  st.write(df)
