@@ -6,3 +6,5 @@ df = pd.read_csv('data.csv',sep=',')
 
 if st.checkbox("Affichier le jdd"):
   st.write(df)
+
+st.selectbox('Selectionnez une profession' [1,2,3,4])
