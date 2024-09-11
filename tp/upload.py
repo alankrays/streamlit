@@ -20,4 +20,5 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file,sep=',')
     st.write(dataframe)
 
-    pd.columns
+    user_selection = st.selectbox('Selectionnez une profession', dataframe.columns())
+
