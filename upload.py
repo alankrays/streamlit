@@ -27,6 +27,6 @@ if uploaded_file is not None:
 
     arr = np.random.normal(1, 1, size=100)
     fig,ax  = plt.subplots()
-    ax.hist(dataframe[user_selection],dataframe.groupby(user_selection).count(),bins=60)
+    ax.bar(dataframe[user_selection],dataframe.groupby(user_selection).count(),bins=60)
 
     st.pyplot(fig)
