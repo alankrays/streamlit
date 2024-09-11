@@ -11,4 +11,6 @@ pro = df.Profession.unique()
 
 user_selection = st.selectbox('Selectionnez une profession', pro)
 
+st.slider("select your character", min_value=20,max_value=100,value=30,step=1
+
 st.write(df[df.Profession==user_selection])
