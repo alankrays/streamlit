@@ -1,2 +1,3 @@
 pandas
 io
+vega_datasets
