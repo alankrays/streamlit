@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from vega-datasets import data
+import matplotlib.pyplot as plt
 
 
 uploaded_file = st.file_uploader("Choose a file",type="csv")
@@ -23,7 +23,8 @@ if uploaded_file is not None:
     st.write(dataframe)
 
     user_selection = st.selectbox('Selectionnez une profession', dataframe.columns)
-    
-    source = dataframe['user_selection']
 
-    st.bar_chart(source, x="year", y="yield", color="site", stack=False)
+    arr = np.random.normal(1, 1, size=100)
+    fig, ax = plt.subplots()
+    ax.hist(arr, bins=20)
+    st.pyplot(fig)
