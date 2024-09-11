@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 from io import StringIO
 from vega_datasets import data
-import numpy as np
 
 uploaded_file = st.file_uploader("Choose a file",type="csv")
 if uploaded_file is not None:
