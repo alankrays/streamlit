@@ -24,6 +24,6 @@ if uploaded_file is not None:
 
     user_selection = st.selectbox('Selectionnez une profession', dataframe.columns)
     
-    source = dataframe['user_selection]
+    source = dataframe['user_selection']
 
     st.bar_chart(source, x="year", y="yield", color="site", stack=False)
