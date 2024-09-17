@@ -18,7 +18,7 @@ st.title("My Dashboard")
 #if st.checkbox("Affichier le jdd"):
  # st.write(df[(df.Age==user_select1) & (df.Profession==user_selection)])
 
-longitude = st.text_input('test')
+longitude  = st.text_input("Movie title", "Life of Brian")
 st.write(longitude)
 #curl -X 'POST' \
 #  'https://0c73-34-32-169-73.ngrok-free.app/predict' \
