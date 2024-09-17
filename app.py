@@ -23,7 +23,7 @@ with st.form("my_form"):
  longitude  = st.text_input("Longitude title", "Life of Brian")
  housing_median_age  = st.text_input("housing_median_age title", "Life of Brian")
  total_rooms  = st.text_input("total_rooms title", "Life of Brian")
- population  = st.population("population title", "Life of Brian")
+ population  = st.text_input("population title", "Life of Brian")
  total_bedrooms  = st.text_input("total_bedrooms title", "Life of Brian")
  households  = st.text_input("households title", "Life of Brian")
  median_income  = st.text_input("median_income title", "Life of Brian")
