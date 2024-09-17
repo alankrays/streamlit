@@ -43,14 +43,6 @@ st.write(data)
 response = requests.post('url',json=data)
 st.write('response.text')
 
-longitude: float
-    latitude: float
-    housing_median_age: float
-    total_rooms: float
-    total_bedrooms: float
-    population: float
-    households: float
-    median_income: float
 #curl -X 'POST' \
 #  'https://0c73-34-32-169-73.ngrok-free.app/predict' \
  # -H 'accept: application/json' \
