@@ -17,8 +17,12 @@ st.title("My Dashboard")
 
 #if st.checkbox("Affichier le jdd"):
  # st.write(df[(df.Age==user_select1) & (df.Profession==user_selection)])
-
-longitude  = st.text_input("Movie title", "Life of Brian")
+with st.form("my_form"):
+   st.write("Inside the form")
+   my_number = st.slider('Pick a number', 1, 10)
+   my_color = st.selectbox('Pick a color', ['red','orange','green','blue','violet'])
+   longitude  = st.text_input("Longitude title", "Life of Brian")
+   st.form_submit_button('Submit my picks')
 st.write(longitude)
 #curl -X 'POST' \
 #  'https://0c73-34-32-169-73.ngrok-free.app/predict' \
