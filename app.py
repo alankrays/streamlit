@@ -18,16 +18,16 @@ st.title("My Dashboard")
 #if st.checkbox("Affichier le jdd"):
  # st.write(df[(df.Age==user_select1) & (df.Profession==user_selection)])
 with st.form("my_form"):
-   st.write("Inside the form")
-   latitude  = st.text_input("latitude title", "Life of Brian")
-   longitude  = st.text_input("Longitude title", "Life of Brian")
-   housing_median_age  = st.text_input("housing_median_age title", "Life of Brian")
-   total_rooms  = st.text_input("total_rooms title", "Life of Brian")
-   population  = st.population("population title", "Life of Brian")
-   total_bedrooms  = st.text_input("total_bedrooms title", "Life of Brian")
-   households  = st.text_input("households title", "Life of Brian")
-   median_income  = st.text_input("median_income title", "Life of Brian")
-   st.form_submit_button('Submit my picks')
+ st.write("Inside the form")
+ latitude  = st.text_input("latitude title", "Life of Brian")
+ longitude  = st.text_input("Longitude title", "Life of Brian")
+ housing_median_age  = st.text_input("housing_median_age title", "Life of Brian")
+ total_rooms  = st.text_input("total_rooms title", "Life of Brian")
+ population  = st.population("population title", "Life of Brian")
+ total_bedrooms  = st.text_input("total_bedrooms title", "Life of Brian")
+ households  = st.text_input("households title", "Life of Brian")
+ median_income  = st.text_input("median_income title", "Life of Brian")
+ st.form_submit_button('Submit my picks')
 
 data = {"latitude" : latitude,
         "longitude" : longitude,
