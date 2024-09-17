@@ -37,7 +37,7 @@ data = {"latitude" : latitude,
         "population":population,
         "households":households,
         "median_income":median_income
-     }
+      }
 st.write(data)
 
 response = requests.post('url',json=data)
