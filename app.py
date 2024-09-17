@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import requests
 
 st.title("My Dashboard")
 #df = pd.read_csv('data.csv',sep=',')
@@ -40,8 +41,8 @@ data = {"latitude" : latitude,
       }
 st.write(data)
 
-response = requests.post('url',json=data)
-st.write('response.text')
+response = requests.post('https://0c73-34-32-169-73.ngrok-free.app/predict',json=data)
+st.write(response.text)
 
 #curl -X 'POST' \
 #  'https://0c73-34-32-169-73.ngrok-free.app/predict' \
