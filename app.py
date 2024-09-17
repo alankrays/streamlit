@@ -29,13 +29,13 @@ with st.form("my_form"):
    median_income  = st.text_input("median_income title", "Life of Brian")
    st.form_submit_button('Submit my picks')
 
-data = {"latitude" : latitude
-        "longitude" : longitude
-        "housing_median_age":housing_median_age
-        "total_rooms":total_rooms
-        "total_bedrooms":total_bedrooms
-        "population":population
-        "households":households
+data = {"latitude" : latitude,
+        "longitude" : longitude,
+        "housing_median_age":housing_median_age,
+        "total_rooms":total_rooms,
+        "total_bedrooms":total_bedrooms,
+        "population":population,
+        "households":households,
         "median_income":median_income
      }
 st.write(data)
