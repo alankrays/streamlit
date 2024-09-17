@@ -19,11 +19,38 @@ st.title("My Dashboard")
  # st.write(df[(df.Age==user_select1) & (df.Profession==user_selection)])
 with st.form("my_form"):
    st.write("Inside the form")
-   my_number = st.slider('Pick a number', 1, 10)
-   my_color = st.selectbox('Pick a color', ['red','orange','green','blue','violet'])
+   latitude  = st.text_input("latitude title", "Life of Brian")
    longitude  = st.text_input("Longitude title", "Life of Brian")
+   housing_median_age  = st.text_input("housing_median_age title", "Life of Brian")
+   total_rooms  = st.text_input("total_rooms title", "Life of Brian")
+   population  = st.population("population title", "Life of Brian")
+   total_bedrooms  = st.text_input("total_bedrooms title", "Life of Brian")
+   households  = st.text_input("households title", "Life of Brian")
+   median_income  = st.text_input("median_income title", "Life of Brian")
    st.form_submit_button('Submit my picks')
-st.write(longitude)
+
+data = {"latitude" : latitude
+        "longitude" : longitude
+        "housing_median_age":housing_median_age
+        "total_rooms":total_rooms
+        "total_bedrooms":total_bedrooms
+        "population":population
+        "households":households
+        "median_income":median_income
+     }
+st.write(data)
+
+response = requests.post('url',json=data)
+st.write('response.text')
+
+longitude: float
+    latitude: float
+    housing_median_age: float
+    total_rooms: float
+    total_bedrooms: float
+    population: float
+    households: float
+    median_income: float
 #curl -X 'POST' \
 #  'https://0c73-34-32-169-73.ngrok-free.app/predict' \
  # -H 'accept: application/json' \
