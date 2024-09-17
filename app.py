@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-#st.title("My Dashboard")
+st.title("My Dashboard")
 #df = pd.read_csv('data.csv',sep=',')
 
 
@@ -18,7 +18,7 @@ import pandas as pd
 #if st.checkbox("Affichier le jdd"):
  # st.write(df[(df.Age==user_select1) & (df.Profession==user_selection)])
 
-longitude = st.text_input(label, value="")
+longitude = st.text_input('test')
 st.write(longitude)
 #curl -X 'POST' \
 #  'https://0c73-34-32-169-73.ngrok-free.app/predict' \
