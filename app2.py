@@ -26,7 +26,7 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        url = 'https://8e11-35-231-28-0.ngrok-free.app/model'
+        url = 'https://4ff9-34-106-148-178.ngrok-free.app/model'
         x = requests.get(url)
         openai_model=x.text.replace('"','')
         stream = client.chat.completions.create(
