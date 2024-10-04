@@ -7,7 +7,7 @@ st.title("FAQ")
 url = 'https://8e11-35-231-28-0.ngrok-free.app/model'
 x = requests.get(url)
 openai_model=x.text.replace('"','')
-#st.write("You selected:", str(x.text))
+st.write("You selected:", openai_model)
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"] )
 
 if "openai_model" not in st.session_state:
