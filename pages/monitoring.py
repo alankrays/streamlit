@@ -10,7 +10,7 @@ option = st.selectbox(
 
 st.write(option)
 url = ' https://8e11-35-231-28-0.ngrok-free.app/updtmodel'
-myobj = {'model': option.text}
+myobj = {'model': option}
 x = requests.post(url, json = myobj)
 
 #openai_model=x.text.replace('"','')
