@@ -10,4 +10,4 @@ option = st.selectbox(
 
 url = ' https://e6fb-35-231-28-0.ngrok-free.app/model'
 x = requests.get(url)
-st.write("You selected:", x.text)
+st.write("You selected:", str(x.text))
