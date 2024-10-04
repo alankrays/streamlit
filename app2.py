@@ -6,7 +6,7 @@ import requests
 st.title("FAQ")
 #st.write(st.session_state["openai_model"])
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"] )
-st.write(st.session_state["openai_model"])
+#st.write(st.session_state["openai_model"])
 
 if "openai_model" not in st.session_state:
     
