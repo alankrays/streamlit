@@ -9,12 +9,12 @@ option = st.selectbox(
 )
 st.write(st.session_state["openai_model"])
 st.write(option)
-url = ' https://8e11-35-231-28-0.ngrok-free.app/updtmodel'
+url = 'https://4ff9-34-106-148-178.ngrok-free.app/updtmodel'
 myobj = {'model': option}
 x = requests.post(url, json = myobj)
 
 #openai_model=x.text.replace('"','')
-url = 'https://8e11-35-231-28-0.ngrok-free.app/model'
+url = 'https://4ff9-34-106-148-178.ngrok-free.app/model'
 x = requests.get(url)
 openai_model=x.text.replace('"','')
 st.session_state["openai_model"] = openai_model
