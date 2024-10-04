@@ -8,6 +8,7 @@ option = st.selectbox(
     ("gpt-3.5-turbo", "gpt-3", "gpt-4"),
 )
 
+st.write(option)
 url = ' https://8e11-35-231-28-0.ngrok-free.app/updtmodel'
 myobj = {'model': option.text}
 x = requests.post(url, json = myobj)
