@@ -13,7 +13,7 @@ if "openai_model" not in st.session_state:
     x = requests.get(url)
     st.write("You selected:", str(x.text))
     #st.session_state["openai_model"] = "gpt-3.5-turbo"
-    st.session_state["openai_model"] = x
+    st.session_state["openai_model"] = x.text
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
