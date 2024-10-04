@@ -1,5 +1,7 @@
 from openai import OpenAI
 import streamlit as st
+import requests
+
 
 st.title("FAQ")
 url = 'https://23fc-35-231-28-0.ngrok-free.app/model'
