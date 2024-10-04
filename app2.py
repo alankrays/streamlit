@@ -4,11 +4,7 @@ import requests
 
 
 st.title("FAQ")
-url = 'https://8e11-35-231-28-0.ngrok-free.app/model'
-x = requests.get(url)
-openai_model=x.text.replace('"','')
-st.write("You selected:", openai_model)
-st.write(st.session_state["openai_model"])
+#st.write(st.session_state["openai_model"])
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"] )
 
 if "openai_model" not in st.session_state:
@@ -30,9 +26,12 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
+        url = 'https://8e11-35-231-28-0.ngrok-free.app/model'
+        x = requests.get(url)
+        openai_model=x.text.replace('"','')
         stream = client.chat.completions.create(
-            model=st.session_state["openai_model"],
-            #model=openai_model,
+            #model=st.session_state["openai_model"],
+            model=openai_model,
             messages=[
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
