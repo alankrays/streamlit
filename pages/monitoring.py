@@ -8,6 +8,12 @@ option = st.selectbox(
     ("gpt-3.5-turbo", "gpt-3", "gpt-4"),
 )
 
-url = 'https://23fc-35-231-28-0.ngrok-free.app/model'
+url = ' https://f92e-35-231-28-0.ngrok-free.app/updtmodel'
+myobj = {'model': option.text}
+x = requests.post(url, json = myobj)
+
+#openai_model=x.text.replace('"','')
+url = ' https://f92e-35-231-28-0.ngrok-free.app/model'
 x = requests.get(url)
-st.write("You selected:", str(x.text))
+openai_model=x.text.replace('"','')
+st.session_state["openai_model"] = openai_model
