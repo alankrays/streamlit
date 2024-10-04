@@ -4,7 +4,7 @@ import requests
 
 
 st.title("FAQ")
-url = ' https://f92e-35-231-28-0.ngrok-free.app/model'
+url = 'https://8e11-35-231-28-0.ngrok-free.app/model'
 x = requests.get(url)
 openai_model=x.text.replace('"','')
 #st.write("You selected:", str(x.text))
