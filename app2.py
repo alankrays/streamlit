@@ -6,10 +6,10 @@ import requests
 st.title("FAQ")
 #st.write(st.session_state["openai_model"])
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"] )
+st.write("You selected:",  st.session_state["openai_model"])
 
 if "openai_model" not in st.session_state:
     
-    st.write("You selected:", str(x.text))
     #st.session_state["openai_model"] = "gpt-3.5-turbo"
     st.session_state["openai_model"] = openai_model
 
