@@ -6,7 +6,7 @@ st.title("FAQ")
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = option
+    st.session_state["openai_model"] = api_model_name
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
