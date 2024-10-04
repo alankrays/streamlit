@@ -2,11 +2,13 @@ from openai import OpenAI
 import streamlit as st
 
 st.title("FAQ")
-
+url = 'https://23fc-35-231-28-0.ngrok-free.app/model'
+x = requests.get(url)
+#st.write("You selected:", str(x.text))
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = api_model_name
+    st.session_state["openai_model"] = x
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
