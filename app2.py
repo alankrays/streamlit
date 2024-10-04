@@ -4,9 +4,11 @@ import requests
 
 
 st.title("FAQ")
-url = 'https://23fc-35-231-28-0.ngrok-free.app/model'
+url = ' https://f92e-35-231-28-0.ngrok-free.app/model'
 x = requests.get(url)
 openai_model=x.text.replace('"','')
+st.write(x)
+st.write(x.text)
 st.write(openai_model)
 #st.write("You selected:", str(x.text))
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"] )
