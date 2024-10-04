@@ -7,7 +7,7 @@ option = st.selectbox(
     "How would you like to be contacted?",
     ("gpt-3.5-turbo", "gpt-3", "gpt-4"),
 )
-
+st.write(st.session_state["openai_model"])
 st.write(option)
 url = ' https://8e11-35-231-28-0.ngrok-free.app/updtmodel'
 myobj = {'model': option}
